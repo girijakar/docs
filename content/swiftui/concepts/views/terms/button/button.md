@@ -19,7 +19,7 @@ A very basic component in UI, which is used to interact and perform certain acti
 
 ## Syntax
 
-```swift
+```psuedo
 Button("Text inside the button"){
   //What happens when you click the button
 }
@@ -29,25 +29,10 @@ The `Text inside the button` is what is shown inside the button.
 
 ## Example
 
-To make a `'delete'` button:
+To make a button which `count` the number of times we `click` it:
+
 
 ```swift
-    Button("Delete") {
-     //Deletes a file
-}
- .font(.title)
- .padding()
- .backgroundColor(Color.red)
- .cornerRadius(40)
- .foregroundColor(Color.white)
- .overlay(RoundedRectangle(cornerRadius: 40).stroke(Color.red))
-```
-
-## Codebyte Example
-To `count` the number of times we `click` the button:
-
-
-```codebyte/swiftui
 @State var count = 0
 var body: some View {
   Button("Click me: \(count)") {
